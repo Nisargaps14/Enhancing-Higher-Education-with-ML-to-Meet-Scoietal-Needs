@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Student </title>
+    <link rel="icon" type="image/x-icon" href="static/assets/img/favicon.ico" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="static/assets/css/users/user-profile.css" rel="stylesheet" type="text/css" />
+    <!--  END CUSTOM STYLE FILE  -->
+</head>
+
+<body>
+
+    <!--  BEGIN NAVBAR  -->
+    <div class="header-container fixed-top">
+        <header class="header navbar navbar-expand-sm">
+
+            <ul class="navbar-item theme-brand flex-row  text-center">
+                <li class="nav-item theme-logo">
+                    <a href="/main">
+                        <img src="static/assets/img/90x90.jpg" class="navbar-logo" alt="logo">
+                    </a>
+                </li>
+                <li class="nav-item theme-text">
+                    <a href="/main" class="nav-link"> Student Evaluation </a>
+                </li>
+            </ul>
+
+
+            <ul class="navbar-item flex-row ml-md-auto">
+                <li class="nav-item dropdown user-profile-dropdown">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <img src="static/assets/img/90x90.jpg" alt="avatar">
+                    </a>
+                    <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">
+                        <div class="">
+                            <div class="dropdown-item">
+                                <a class="" href="/logout"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-log-out">
+                                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                        <polyline points="16 17 21 12 16 7"></polyline>
+                                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                                    </svg> Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </header>
+    </div>
+    <!--  END NAVBAR  -->
+
+    <!--  BEGIN NAVBAR  -->
+    <div class="sub-header-container">
+        <header class="header navbar navbar-expand-sm">
+            <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-menu">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg></a>
+<button class="btn btn-warning" onclick="trainModel()">🔁 Train Model</button>
+
+        </header>
+    </div>
+    <!--  END NAVBAR  -->
+
+    <!--  BEGIN MAIN CONTAINER  -->
+    <div class="main-container" id="container">
+
+        <div class="overlay"></div>
+        <div class="search-overlay"></div>
+
+        <!--  BEGIN SIDEBAR  -->
+        <div class="sidebar-wrapper sidebar-theme">
+
+            <nav id="sidebar">
+                <div class="shadow-bottom"></div>
+
+                <ul class="list-unstyled menu-categories" id="accordionExample">
+
+                    <li class="menu">
+                        <a href="/main" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-airplay">
+                                    <path
+                                        d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1">
+                                    </path>
+                                    <polygon points="12 15 17 21 7 21 12 15"></polygon>
+                                </svg>
+                                <span>Students</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="menu">
+                        <a href="/curriculumui" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-layout">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                                </svg>
+                                <span>Curriculum</span>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+        <!--  END SIDEBAR  -->
+
+        <!--  BEGIN CONTENT AREA  -->
+        <div id="content" class="main-content">
+            <div class="layout-px-spacing">
+
+                <div class="row layout-spacing">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 layout-top-spacing">
+                        <div class="bio layout-spacing ">
+                            <div class="widget-content widget-content-area">
+                                <h3 class="">Students</h3>
+                                <div class="bio-skill-box">
+                                    <div class="mb-3 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <label for="semesterFilter">Filter by Semester:</label>
+                                            <select id="semesterFilter" class="form-select w-auto d-inline-block">
+                                                <option value="">All</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </div>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#addModal">+
+                                            Add Student</button>
+                                    </div>
+
+                                    <table class="table" id="studentsTable">
+                                        <thead>
+                                            <tr>
+                                                <th>USN</th>
+                                                <th>Name</th>
+                                                <th>Semester</th>
+                                                <th>Subject</th>
+                                                <th>Attendance</th>
+                                                <th>Internal1</th>
+                                                <th>Internal2</th>
+                                                <th>Internal3</th>
+                                                <th>Assignment</th>
+                                                <th>Student Status</th>
+                                                <th width="20%">Actions</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-wrapper">
+                <div class="footer-section f-section-1">
+                    <p class="">Copyright © 2020 <a target="_blank" href="https://designreset.com">DesignReset</a>, All
+                        rights reserved.</p>
+                </div>
+                <div class="footer-section f-section-2">
+                    <p class="">Coded with <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg></p>
+                </div>
+            </div>
+        </div>
+        <!--  END CONTENT AREA  -->
+    </div>
+    <!-- END MAIN CONTAINER -->
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="static/assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="static/bootstrap/js/popper.min.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="static/assets/js/app.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        $(document).ready(function () {
+            App.init();
+        });
+    </script>
+    <script src="static/assets/js/custom.js"></script>
+    <script>
+        let studentTable;
+        function loadStudents() {
+            $.get('/students', function (data) {
+                const tbody = $('#studentsTable tbody');
+                tbody.empty();
+
+                if ($.fn.DataTable.isDataTable('#studentsTable')) {
+                    $('#studentsTable').DataTable().clear().destroy();  // ✅ Ensures full reset
+                }
+
+                data.forEach(row => {
+                    tbody.append(`
+                <tr>
+                  <td>${row.usn}</td>
+                  <td>${row.name}</td>
+                  <td>${row.semester}</td>
+                  <td><input class="form-control form-control-sm" value="${row.subject}" data-old="${row.subject}"></td>
+                  <td><input class="form-control form-control-sm" value="${row.attendance}"></td>
+                  <td><input class="form-control form-control-sm" value="${row.internal1}"></td>
+                  <td><input class="form-control form-control-sm" value="${row.internal2}"></td>
+                  <td><input class="form-control form-control-sm" value="${row.internal3}"></td>
+                  <td><input class="form-control form-control-sm" value="${row.assignment}"></td>
+                    <td>
+                        <button class="btn btn-sm btn-warning" onclick="viewStudentStatus('${row.usn}')">
+                            View Status
+                        </button>
+                    </td>
+                  <td>
+                    <button class="btn btn-sm btn-primary" onclick="updateStudent(this, '${row.usn}', '${row.name}', '${row.semester}')">Update</button>
+                    <button class="btn btn-sm btn-danger" onclick="deleteStudent('${row.usn}', '${row.semester}', '${row.subject}')">Delete</button>
+                  </td>
+                  
+                </tr>
+            `);
+                });
+
+                studentTable = $('#studentsTable').DataTable({
+                    scrollX: true
+                });
+
+                $('#semesterFilter').off().on('change', function () {
+                    const val = this.value;
+                    studentTable.column(2).search(val).draw();
+                });
+            });
+        }
+        function updateStudent(btn, usn, name, semester) {
+            const row = $(btn).closest('tr');
+            const inputs = row.find('input');
+            const old_subject = $(inputs[0]).data('old');
+            const new_subject = $(inputs[0]).val();
+            const attendance = $(inputs[1]).val();
+            const internal1 = $(inputs[2]).val();
+            const internal2 = $(inputs[3]).val();
+            const internal3 = $(inputs[4]).val();
+            const assignment = $(inputs[5]).val();
+
+            $.ajax({
+                url: '/students/update',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    usn, name, semester, old_subject, new_subject,
+                    attendance, internal1, internal2, internal3, assignment
+                }),
+                success: function () {
+                    Swal.fire('Updated!', '', 'success');
+                    loadStudents();
+                },
+                error: function () {
+                    Swal.fire('Error', 'Update failed', 'error');
+                }
+            });
+        }
+
+        function deleteStudent(usn, semester, subject) {
+            Swal.fire({
+                title: 'Confirm delete?',
+                showCancelButton: true,
+                confirmButtonText: 'Delete'
+            }).then(result => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: '/students/delete',
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify({ usn, semester, subject }),
+                        success: () => {
+                            Swal.fire('Deleted!', '', 'success');
+                            loadStudents();
+                        },
+                        error: () => Swal.fire('Error', 'Delete failed', 'error')
+                    });
+                }
+            });
+        }
+
+        $(document).ready(() => {
+
+            $('#addStudentForm').off('submit').on('submit', function (e) {
+    e.preventDefault();
+
+    const selectedSubject = $('#subject').val();
+    const validSubjects = $('#subjectList option').map(function () {
+        return this.value;
+    }).get();
+
+    if (!validSubjects.includes(selectedSubject)) {
+        Swal.fire('Invalid Subject', 'Please select a subject from the list.', 'error');
+        return;
+    }
+
+    const payload = {
+        usn: $('#usn').val(),
+        name: $('#name').val(),
+        semester: $('#semester').val(),
+        subject: selectedSubject,
+        attendance: $('#attendance').val(),
+        internal1: $('#internal1').val(),
+        internal2: $('#internal2').val(),
+        internal3: $('#internal3').val(),
+        assignment: $('#assignment').val()
+    };
+
+    $.ajax({
+        url: '/students/add',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(payload),
+        success: () => {
+            $('#addModal').modal('hide');
+            Swal.fire('Added!', '', 'success');
+            $('#addStudentForm')[0].reset();
+            loadStudents();
+        },
+        error: (e) => Swal.fire('Error', e.responseJSON.message, 'error')
+    });
+});
+
+
+        });
+        $(document).ready(() => {
+    loadStudents();
+
+    $('#semester').on('change', function () {
+        const semester = $(this).val();
+
+        if (semester) {
+            $.get(`/subjects/${semester}`, function (data) {
+                const datalist = $('#subjectList');
+                datalist.empty();
+
+                data.subjects.forEach(subject => {
+                    datalist.append(`<option value="${subject}">`);
+                });
+
+                $('#subject').prop('disabled', false);
+            });
+        } else {
+            $('#subject').prop('disabled', true);
+        }
+    });
+});
+
+
+        function viewStudentStatus(usn) {
+            const newWindow = window.open(`/status/${usn}`, '_blank');
+        }
+
+        function trainModel() {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "This will retrain the ML model with the latest data.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, Train It!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+
+                    Swal.fire({
+                        title: 'Training Model...',
+                        html: 'Please wait while the model is being trained.',
+                        allowOutsideClick: false,
+                        didOpen: () => {
+                            Swal.showLoading();
+                        }
+                    });
+
+                    $.ajax({
+                        url: '/train-model',
+                        method: 'POST',
+                        success: function (res) {
+                            Swal.fire('✅ Success', res.message, 'success');
+                        },
+                        error: function (xhr) {
+                            Swal.fire('❌ Error', xhr.responseJSON?.message || 'Training failed', 'error');
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+
+    <div class="modal fade" id="addModal" tabindex="-1">
+        <div class="modal-dialog">
+            <form class="modal-content" id="addStudentForm">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Student</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control mb-2" placeholder="USN" id="usn" required><br>
+                    <input class="form-control mb-2" placeholder="Name" id="name" required><br>
+                    <select id="semester" class="form-control form-select w-auto d-inline-block" required>
+                     <option value="" disabled selected>Select Semester</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     </select><br>
+                    <input list="subjectList" class="form-control mb-2" placeholder="Start typing subject..." id="subject" disabled required>
+
+                     <datalist id="subjectList"></datalist>
+                     <br>
+                    <input type="number" class="form-control mb-2" placeholder="Attendance" id="attendance" max="100"
+                        required><br>
+                    <input type="number" class="form-control mb-2" placeholder="Internal1" id="internal1" max="50"
+                        required><br>
+                    <input type="number" class="form-control mb-2" placeholder="Internal2" id="internal2" max="50"
+                        required><br>
+                    <input type="number" class="form-control mb-2" placeholder="Internal3" id="internal3" max="50"
+                        required><br>
+                    <input type="number" class="form-control mb-2" placeholder="Assignment" id="assignment" max="10"
+                        required><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+

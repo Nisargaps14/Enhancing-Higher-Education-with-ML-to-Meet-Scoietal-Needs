@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Education Support System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 40px;
+            background-color: #f8f9fa;
+        }
+        .card {
+            margin-top: 20px;
+        }
+        .result-box {
+            margin-top: 30px;
+        }
+        .recommendation {
+            font-style: italic;
+            color: #555;
+        }
+        .pass {
+            color: green;
+        }
+        .fail {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4 text-center">🎓 Education Support System</h2>
+        <div class="card p-4 shadow-sm">
+            <form method="POST" action="/search">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="usn" class="form-label">USN</label>
+                        <input type="text" id="usn" name="usn" class="form-control" placeholder="Enter USN">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="semester" class="form-label">Semester</label>
+                        <select name="semester" id="semester" class="form-select">
+                            <option value="">Select</option>
+                            {% for sem in semesters %}
+                            <option value="{{ sem }}">{{ sem }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <button type="submit" class="btn btn-primary">🔍 Search</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="result-box mt-5">
+            {% if result %}
+                <div class="card p-4 shadow-sm bg-white">
+                    {{ result|safe }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

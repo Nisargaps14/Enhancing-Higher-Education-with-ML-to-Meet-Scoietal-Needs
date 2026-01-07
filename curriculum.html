@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Student </title>
+    <link rel="icon" type="image/x-icon" href="static/assets/img/favicon.ico" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="static/assets/css/users/user-profile.css" rel="stylesheet" type="text/css" />
+    <!--  END CUSTOM STYLE FILE  -->
+</head>
+
+<body>
+
+    <!--  BEGIN NAVBAR  -->
+    <div class="header-container fixed-top">
+        <header class="header navbar navbar-expand-sm">
+
+            <ul class="navbar-item theme-brand flex-row  text-center">
+                <li class="nav-item theme-logo">
+                    <a href="/main">
+                        <img src="static/assets/img/90x90.jpg" class="navbar-logo" alt="logo">
+                    </a>
+                </li>
+                <li class="nav-item theme-text">
+                    <a href="/main" class="nav-link"> Student Evaluation </a>
+                </li>
+            </ul>
+
+
+
+            <ul class="navbar-item flex-row ml-md-auto">
+                <li class="nav-item dropdown user-profile-dropdown">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <img src="static/assets/img/90x90.jpg" alt="avatar">
+                    </a>
+                    <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">
+                        <div class="">
+                            <div class="dropdown-item">
+                                <a class="" href="/logout"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-log-out">
+                                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                        <polyline points="16 17 21 12 16 7"></polyline>
+                                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                                    </svg> Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </header>
+    </div>
+    <!--  END NAVBAR  -->
+
+    <!--  BEGIN NAVBAR  -->
+    <div class="sub-header-container">
+        <header class="header navbar navbar-expand-sm">
+            <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-menu">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg></a>
+
+
+        </header>
+    </div>
+    <!--  END NAVBAR  -->
+
+    <!--  BEGIN MAIN CONTAINER  -->
+    <div class="main-container" id="container">
+
+        <div class="overlay"></div>
+        <div class="search-overlay"></div>
+
+        <!--  BEGIN SIDEBAR  -->
+        <div class="sidebar-wrapper sidebar-theme">
+
+            <nav id="sidebar">
+                <div class="shadow-bottom"></div>
+
+                <ul class="list-unstyled menu-categories" id="accordionExample">
+
+                    <li class="menu">
+                        <a href="/main" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-airplay">
+                                    <path
+                                        d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1">
+                                    </path>
+                                    <polygon points="12 15 17 21 7 21 12 15"></polygon>
+                                </svg>
+                                <span>Students</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="menu">
+                        <a href="/curriculumui" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-layout">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                                </svg>
+                                <span>Curriculum</span>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+        <!--  END SIDEBAR  -->
+
+        <!--  BEGIN CONTENT AREA  -->
+        <div id="content" class="main-content">
+            <div class="layout-px-spacing">
+
+                <div class="row layout-spacing">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 layout-top-spacing">
+                        <div class="bio layout-spacing ">
+                            <div class="widget-content widget-content-area">
+                                <h3 class="">Curriculum</h3>
+                                <div class="bio-skill-box">
+                                    <button class="btn btn-success mb-2" data-toggle="modal"
+                                        data-target="#addSubjectModal">+ Add Subject</button>
+                                    <table class="table" id="curriculumTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Semester</th>
+                                                <th>Subject</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-wrapper">
+                <div class="footer-section f-section-1">
+                    <p class="">Copyright © 2020 <a target="_blank" href="https://designreset.com">DesignReset</a>, All
+                        rights reserved.</p>
+                </div>
+                <div class="footer-section f-section-2">
+                    <p class="">Coded with <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg></p>
+                </div>
+            </div>
+        </div>
+        <!--  END CONTENT AREA  -->
+    </div>
+    <!-- END MAIN CONTAINER -->
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="static/assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="static/bootstrap/js/popper.min.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="static/assets/js/app.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            App.init();
+        });
+    </script>
+    <script src="static/assets/js/custom.js"></script>
+    <script>
+        function loadCurriculum() {
+            $.get('/curriculum', function (data) {
+                const tableBody = $('#curriculumTable tbody');
+                tableBody.empty();
+                Object.entries(data).forEach(([semester, subjects]) => {
+                    subjects.forEach(subject => {
+                        tableBody.append(`
+          <tr>
+            <td>${semester}</td>
+            <td><input class="form-control form-control-sm" value="${subject}" data-sem="${semester}" data-old="${subject}"></td>
+            <td>
+              <button class="btn btn-primary btn-sm" onclick="updateSubject(this)">Update</button>
+              <button class="btn btn-danger btn-sm" onclick="deleteSubject('${semester}', '${subject}')">Delete</button>
+            </td>
+          </tr>
+        `);
+                    });
+                });
+                $('#curriculumTable').DataTable();
+            });
+        }
+
+        function updateSubject(btn) {
+            var row = $(btn).closest('tr');
+            var input = row.find('input');
+            var sem = input.data('sem');
+            var oldSub = input.data('old');
+            var newSub = input.val();
+
+            if (!newSub) {
+                Swal.fire('Error', 'Subject name cannot be empty', 'error');
+                return;
+            }
+
+            $.ajax({
+                url: '/curriculumupdate',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    semester: sem,
+                    old_subject: oldSub,
+                    new_subject: newSub
+                }),
+                success: function (response) {
+                    Swal.fire('Updated!', '', 'success');
+                    $('#curriculumTable').DataTable().destroy();
+                    loadCurriculum();
+                },
+                error: function (xhr, status, error) {
+                    Swal.fire('Error', 'Update failed', 'error');
+                }
+            });
+        }
+
+        function deleteSubject(sem, subject) {
+            Swal.fire({
+                title: `Delete "${subject}"?`,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete'
+            }).then(result => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: '/curriculumdelete',
+                        method: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify({ semester: sem, subject }),
+                        success: () => { Swal.fire('Deleted!', '', 'success'); $('#curriculumTable').DataTable().destroy(); loadCurriculum(); },
+                        error: () => Swal.fire('Error', 'Delete failed', 'error')
+                    });
+                }
+            });
+        }
+
+        $(document).ready(() => {
+            $('#addSubjectForm').off('submit').on('submit', function (e) {
+                e.preventDefault();
+                const sem = $('#addSemester').val();
+                const sub = $('#addSubject').val().trim();
+                if (!sub) return Swal.fire('Error', 'Enter subject name', 'error');
+
+                $.ajax({
+                    url: window.location.origin + '/curriculumadd',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ semester: sem, subject: sub }),
+                    success: () => {
+                        $('#addSubjectModal').modal('hide');
+                        Swal.fire('Added!', '', 'success');
+                        $('#curriculumTable').DataTable().destroy();
+                        loadCurriculum();
+                    },
+                    error: (xhr) => {
+                        Swal.fire('Error', xhr.responseJSON?.message || 'Add failed', 'error');
+                    }
+                });
+            });
+        });
+        $(document).ready(() => {
+            loadCurriculum();
+        });
+    </script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+    <div class="modal fade" id="addSubjectModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form id="addSubjectForm">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add New Subject</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label>Semester</label>
+                        <select id="addSemester" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <label class="mt-2">Subject</label>
+                        <input type="text" id="addSubject" class="form-control" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" id="submitSubject">Add Subject</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
